@@ -1,0 +1,77 @@
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+ul[class],
+ol[class] {
+	padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+ul[class],
+ol[class] {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+html {
+    // This defines what 1 rem is 
+    font-size: 62.5%;
+}
+
+
+body {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    max-width: 114rem;
+    margin: 0 auto;
+}
+
+.flex-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+
+    &--column {
+        flex-direction: column;
+        align-items: center;
+
+    }
+}
+
+.btn-reset {
+	border: none;
+	padding: 0;
+	background-color: transparent;
+	cursor: pointer;
+}
