@@ -7,6 +7,14 @@
     padding-left: 9rem;
     transform: skewX(-12deg);
 
+    @include respond(mobile) {
+        transform: skewX(0);
+        display: grid;
+        gap: 2rem;
+        padding: 5rem;
+        width: 90%;
+    }
+
     &__circle {
         position: relative;
         width: 15rem;
@@ -15,6 +23,10 @@
         shape-outside: circle(50%);
         clip-path: circle(50%);
         transform: translateX(-3rem) skewX(12deg);
+
+        @include respond(mobile) {
+            transform: translateX(0) skewX(0);
+        }
     }
 
     &__img {
@@ -44,6 +56,10 @@
 
     &__text {
         transform: skewX(12deg);
+
+        @include respond(mobile) {
+            transform: skewX(0);
+        }
     }
 
     &:hover &__img {

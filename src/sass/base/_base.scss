@@ -37,7 +37,15 @@ a {
 
 html {
     // This defines what 1 rem is 
-    font-size: 62.5%;
+    font-size: 62.5%; //1rem = 10px, 10px/16px = 62.5%
+
+    @include respond(tablet) {
+        font-size: 56.25%; 
+    }
+
+    @include respond(small-tablet) {
+        font-size: 50%; //1rem = 8px, 8/16 = 50%'
+    }
 }
 
 
@@ -45,6 +53,11 @@ body {
     box-sizing: border-box;
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
+    padding: 3rem;
+
+    @include respond(tablet) {
+        padding: 0;
+    }
 }
 
 img {
@@ -54,18 +67,19 @@ img {
 
 .container {
     max-width: 114rem;
+    padding: 0 1.5rem;
     margin: 0 auto;
 }
 
 .flex-wrapper {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 4rem;
 
     &--column {
         flex-direction: column;
         align-items: center;
-
     }
 }
 

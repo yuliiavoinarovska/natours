@@ -8,6 +8,10 @@
     box-shadow: $shadow-1;
     transition: transform .3s;
 
+    @include respond(small-tablet) {
+        @include flex-2-col;
+    }
+
     &__icon {
         height: 6rem;
         width: 100%;

@@ -12,6 +12,10 @@
     display: grid;
     place-content: center;
 
+    @include respond(mobile) {
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
+
     &__logo {
         position: absolute;
         top: 4rem;

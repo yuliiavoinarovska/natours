@@ -52,7 +52,7 @@
                             Exciting tours for adventurous people
                         </h2>
                     </div>
-                    <div class="flex-wrapper">
+                    <div class="flex-wrapper section-about__flex">
                         <div class="content">
                             <h3 class="heading-tertiary u-margin-bottom-small">You're going to fall in love with nature</h3>
                             <p class="paragraph">
@@ -307,7 +307,7 @@
                                         <label for="email" class="form__label">Email address</label>
                                     </div>
 
-                                    <div class="flex-wrapper  u-margin-top-small">
+                                    <div class="form__radio-wrapper u-margin-top-small">
                                         <div class="form__radio-group">
                                             <input type="radio" class="form__radio-input" id="small" name="size" checked>
                                             <label for="small" class="form__radio-label">
@@ -335,9 +335,16 @@
 
         <footer class="footer">
             <div class="container footer__container">
+
                 <div class="footer__logo-wrapper">
-                    <img src="img/logo-green-2x.png" alt="Logo" class="footer__logo">
+                    <picture  class="footer__logo">
+                        <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x,"
+                         media="(max-width: 37.5em)">
+                        <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Logo"
+                        src="img/logo-green-1x.png" >
+                    </picture>
                 </div>
+
                 <div class="footer__nav footer-nav">
                     <ul class="footer-nav__list">
                         <li class="footer-nav__item"><a href="#" class="footer-nav__link">Company</a></li>
@@ -352,19 +359,16 @@
                 </p>
             </div>
         </footer>
-        
+
         <div class="popup" id="popup">
             <div class="popup__content">
-                <div class="popup__left">
-                    <img src="img/nat-8.jpg" alt="Photo" class="popup__img">
-                    <img src="img/nat-9.jpg" alt="Photo" class="popup__img">
-                </div>
+                <img src="img/nat-8.jpg" alt="Photo" class="popup__img popup__img--1">
+                <img src="img/nat-9.jpg" alt="Photo" class="popup__img popup__img--2">
                 <div class="popup__right">
                     <a href="#tours" class="popup__close">&times;</a>
-                    <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
-                    <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before booking</h3>
+                    <h2 class="popup__heading heading-secondary u-margin-bottom-small">Start booking now</h2>
+                    <h3 class=" heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before booking</h3>
                     <p class="popup__text">
-                        Whether it's exploring remote landscapes, immersing in vibrant cultures, or simply wandering.
                         From scaling towering mountains to diving into the depths of the ocean, every moment is a chance to embrace the unknown and discover the beauty of the world. Whether it's exploring remote landscapes, immersing in vibrant cultures, or simply wandering through untamed wilderness, adventures awaken the soul and leave indelible marks on the tapestry of our memories.
                     </p>
                     <button class="btn btn--green btn-reset">Book now</button>

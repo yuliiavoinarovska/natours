@@ -3,7 +3,6 @@ body {
     font-weight: 400;
     line-height: 1.7;
     color: $color-gray-dark-1;
-    padding: 3rem;
 }
 
 .heading-primary {
@@ -17,6 +16,11 @@ body {
         font-size: 6rem;
         letter-spacing: 3.5rem;
         animation: moveInLeft 1s ease-out;
+
+        @include respond(mobile) {
+            letter-spacing: 1rem;
+            font-size: 5rem;
+        }
     }
 
     &--sub {
@@ -25,10 +29,15 @@ body {
         letter-spacing: 1.75rem;
         font-weight: 700;
         animation: moveInRight 1s ease-out;
+
+        @include respond(mobile) {
+            letter-spacing: .5rem;
+        }
     }
 }
 
 .heading-secondary {
+    width: 80%;
     font-size: 3.5rem;
     text-transform: uppercase;
     font-weight: 700;
@@ -43,6 +52,12 @@ body {
     &:hover {
         transform: scale(1.1);
         text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+    }
+
+    @include respond(small-tablet) {
+        font-size: 2.8rem;
+        width: 90%;
+        
     }
 }
 

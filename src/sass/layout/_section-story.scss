@@ -1,4 +1,12 @@
 .section-story {
     position: relative;
     padding: 15rem 0;
+
+    @include respond(small-tablet) {
+        padding: 10rem 0;
+    }
+
+    @include respond(mobile) {
+        padding: 7rem 0;
+    }
 }

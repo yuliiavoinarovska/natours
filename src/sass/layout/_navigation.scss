@@ -17,6 +17,16 @@
         box-shadow: $shadow-1;
         z-index: 200;
         cursor: pointer;
+
+        @include respond(small-tablet) {
+            top: 4rem;
+            right: 4rem;
+        }
+
+        @include respond(mobile) {
+            top: 3rem;
+            right: 3rem;
+        }
     }
 
     &__bg {
@@ -29,6 +39,16 @@
         background-image: radial-gradient($color-primary-light, $color-primary-dark);
         z-index: 100;
         transition: transform .8s cubic-bezier(0.83, 0, 0.17, 1); 
+
+        @include respond(small-tablet) {
+            top: 4.5rem;
+            right: 4.5rem;
+        }
+
+        @include respond(mobile) {
+            top: 3.5rem;
+            right: 3.5rem;
+        }
     }
 
     &__menu {

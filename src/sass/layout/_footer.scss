@@ -3,16 +3,34 @@
     padding: 10rem 0;
     font-size: 1.4rem;
 
+    @include respond(small-tablet) {
+        padding: 8rem 0;
+    }
+
+    @include respond(mobile) {
+        padding: 6rem 0;
+    }
+
     &__container {
         display: grid;
         grid-template-columns: 1fr max-content 1fr;
         row-gap: 8rem;
+
+        @include respond(small-tablet) {
+            place-items: center;
+            grid-template-columns: 1fr;
+            row-gap: 5rem;
+        }
     }
 
     &__logo-wrapper {
         display: block;
         width: 15rem;
         grid-column: 2 / 3;
+
+        @include respond(small-tablet) {
+            grid-column: 1 / -1;
+        }
     }
 
     &__logo {
@@ -21,6 +39,15 @@
 
     &__nav {
         grid-column: 1 / 2;
+
+        @include respond(small-tablet) {
+            width: 80%;
+            grid-column: 1 / -1;
+        }
+
+        @include respond(mobile) {
+            width: 100%;
+        }
     }
 
     &__copyright {
@@ -28,6 +55,15 @@
         border-top: 1px solid $color-gray-light-2;
         padding-top: 2rem;
         color: $color-gray-light-1;
+
+        @include respond(small-tablet) {
+            width: 80%;
+            grid-column: 1 / -1;
+        }
+
+        @include respond(mobile) {
+            width: 100%;
+        }
     }
 }
 
@@ -37,6 +73,7 @@
 
     &__list {
         display: flex;
+        justify-content: space-between;
         gap: 2rem;
     }
 

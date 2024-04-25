@@ -2,10 +2,10 @@
     @include flex-3-col;
     perspective: 150rem;
     position: relative;
-    height: 52rem;
+    height: 54rem;
 
     &__side {
-        height: 52rem;
+        height: 54rem;
         width: 100%;
         position: absolute;
         top: 0;
@@ -147,5 +147,59 @@
         font-size: 6rem;
         font-weight: 100;
     }
+
+
+    // RESPONSIVE
+    // TABLET
+    @media only screen and (max-width: 56.25em),
+        only screen and (hover: none)  {
+        height: auto;
+        border-radius: $border-small;
+        background-color: $color-white;
+        box-shadow: $shadow-1;
+
+        &__side {
+            height: auto;
+            width: 100%;
+            position: relative;
+            box-shadow: none;
+
+            &--back {
+                transform: rotateY(0);
+                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+            }
+        }
+
+        &__details {
+            ul {
+                padding: 3rem 3rem 2rem 3rem; 
+            } 
+        }
+
+        &:hover &__side--front{
+            transform: rotateY(0);
+        }
+
+        // BACK SIDE STYLING
+        &__cta {
+            padding: 7rem 4rem 4rem 4rem;
+            gap: 3rem;
+        }
+
+        &__price {
+            margin-bottom: 0;
+        }
+
+        &__price-value {
+            font-size: 6rem;
+        }
+    }
+
+    //MOBILE
+    @media only screen and (max-width: 56.25em){
+        @include flex-1-col-80;
+    }
 } 
+
+
 

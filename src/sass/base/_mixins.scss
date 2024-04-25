@@ -9,3 +9,46 @@
 @mixin flex-4-col {
     flex: 1 1 calc(100% / 4 - 4rem * 3 / 4);
 }
+
+@mixin flex-1-col {
+    flex: 0 1 100%;
+}
+
+@mixin flex-1-col-90 {
+    flex: 0 1 90%;
+}
+
+@mixin flex-1-col-80 {
+    flex: 0 1 80%;
+}
+
+@mixin flex-1-col-70 {
+    flex: 0 1 70%;
+}
+
+
+
+// MEDIA QUERY MANAGER
+
+/* 
+$breakpoint argument choices:
+- mobile 
+- small-tablet (tablet and small tablet/phone portrait)
+- tablet (tablet portrait and small desctop)
+
+1em = 16px
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == mobile {
+        @media (max-width: 37.5em) {@content}; //600
+    }
+
+    @if $breakpoint == small-tablet {
+        @media (max-width: 56.25em) {@content}; //900
+    }
+
+    @if $breakpoint == tablet {
+        @media (max-width: 75em) {@content}; //1200
+    }
+}

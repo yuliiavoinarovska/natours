@@ -2,6 +2,22 @@
     background-color: $color-gray-light-1;
     padding: 25rem 0 35rem 0;
     margin-top: -20vh;
+
+    &__flex {
+        @include respond(mobile) {
+            display: grid;
+            grid-template-rows: 1fr 400px;
+        }
+    }
+
+    @include respond(small-tablet) {
+        padding: 20rem 0;
+    }
+
+    @include respond(mobile) {
+        padding: 15rem 0 10rem 0;
+        margin-top: -10rem;
+    }
 }
 
 .content {

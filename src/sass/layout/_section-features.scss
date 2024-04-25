@@ -11,4 +11,12 @@
     & > * {
         transform: skewY(7deg);
     }
+
+    @include respond(small-tablet) {
+        padding: 10rem 0;
+    }
+
+    @include respond(mobile) {
+        padding: 7rem 0;
+    }
 }
